@@ -1,0 +1,20 @@
+{
+  "public": {
+    "config": {
+      "collections": {
+        "prefix": "mbp"
+      }
+    }
+  },
+  "sitename": "",
+  "emails": {
+    "contact": {
+      "from": "your name <youremail@youremail.com>",
+      "signature": "your signature"
+    }
+  },
+  "kadira": {
+    "appId": "",
+    "appSecret": ""
+  }
+}

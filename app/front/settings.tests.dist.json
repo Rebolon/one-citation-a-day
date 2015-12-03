@@ -1,0 +1,9 @@
+{
+  "public" {
+    "config": {
+      "collections": {
+        "prefix": "test-mbp"
+      }
+    }
+  }
+}

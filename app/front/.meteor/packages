@@ -1,0 +1,91 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform          # for METEOR@1.1.*
+
+#essentials for METEOR@1.2-rc.12
+#meteor-base             # Packages every Meteor app needs to have
+#mobile-experience       # Packages for a great mobile UX
+#mongo                   # The database Meteor supports right now
+#blaze-html-templates    # Compile .html files into Meteor Blaze views
+#session                 # Client-side reactive dictionary for your app
+#jquery                  # Helpful client-side library
+#tracker                 # Meteor's client-side reactive programming library
+#standard-minifiers      # JS/CSS minifiers run for production mode
+#es5-shim                # ECMAScript 5 compatibility for older browsers.
+#ecmascript              # Enable ECMAScript2015+ syntax in app code
+
+#myessentials for METEOR@1.2-rc.12
+#check
+#templating                              # i thought it should be included by blaze-html-templates
+#ui                                      # i thought it should be included by blaze-html-templates
+#ddp
+#blaze-tools                             # include underscore
+
+#to be removed
+autopublish
+insecure
+
+#design
+raix:handlebar-helpers                  # new helpers for templating
+useraccounts:materialize                # useraccounts with the materializecss design
+#materialize:materialize                #finally i prefer to use /tools/sass/ for css
+service-configuration                   #to allow social login with useraccounts:core
+accounts-ui                             #same as previous
+
+#login
+accounts-password
+accounts-facebook
+accounts-google
+accounts-twitter
+
+#advanced
+raix:eventemitter
+less                                    # i use sass with webstorm file watcher, but some packages still uses less
+email
+http
+underscore
+reactive-dict
+aldeed:template-extension               # allow template replace : for mdg:camera per example
+aldeed:simple-schema                    # build schema that represent your data and validate input throught check package
+aldeed:autoform                         # quickly build form from collection or schema
+aldeed:collection2                      # to bind schema on collection
+gildaspk:autoform-materialize           # materializecss design for autoform
+mxab:simple-schema-jsdoc                # for documentation
+#gildaspk:autoform-modals-materialize
+okland:camera-ui                        # overload mdg:camera
+mdg:geolocation
+meteorhacks:ssr                         # server side rendering
+
+#routing (flow-router or iron-router ? take care at the useraccounts deps)
+meteorhacks:picker                      # server side routing
+kadira:blaze-layout
+kadira:flow-router
+useraccounts:flow-routing
+arillo:flow-router-helpers
+zimme:active-route
+
+#mobile
+#mdg:reload-on-resume
+#fastclick
+#appcache                               #disabled until production
+meteorhacks:fast-render
+meteorhacks:subs-manager
+
+#monitoring
+meteorhacks:kadira
+meteorhacks:zones
+okgrow:analytics
+#tail:core                              #it can generates error with mdg:camera Uncaught Error: Must be attached
+
+#debug
+kadira:debug
+nrswolf:observatory
+#astronomerio:core                      # fail with meteor 1.2 RC
+msavin:mongol
+meteortoys:toykit
+
+#specific

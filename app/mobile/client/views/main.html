@@ -1,0 +1,21 @@
+<template name="main">
+    <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-offset-3 col-lg-6 col-lg-offset-4">
+            <div class="valign-wrapper">
+                {{#with oneCite}}
+                <figure class="valign">
+                    <blockquote cite="">
+                        “{{ cite }}”
+                    </blockquote>
+                    <figcaption>{{ author }}</figcaption>
+                </figure>
+                {{/with}}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-offset-3 col-lg-6 col-lg-offset-4">
+            Bientôt la possibilité de voter pour la citation du jour !
+        </div>
+    </div>
+</template>
