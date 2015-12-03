@@ -9,17 +9,17 @@ App.info({
 
 // Set up resources such as icons and launch screens.
 App.icons({
-  'android_mdpi': 'icons/android_mdpi.png',
-  'android_ldpi': 'icons/android_ldpi.png',
-  'android_hdpi': 'icons/android_hdpi.png',
-  'android_xhdpi': 'icons/android_xhdpi.png',
+  'android_mdpi': 'private/icons/android_mdpi.png',
+  'android_ldpi': 'private/icons/android_ldpi.png',
+  'android_hdpi': 'private/icons/android_hdpi.png',
+  'android_xhdpi': 'private/icons/android_xhdpi.png',
 });
 
 App.launchScreens({
-  'android_mdpi_portrait': 'splash/android_mdpi.png',
-  'android_ldpi_portrait': 'splash/android_ldpi.png',
-  'android_hdpi_portrait': 'splash/android_hdpi.png',
-  'android_xhdpi_portrait': 'splash/android_xhdpi.png'
+  'android_mdpi_portrait': 'private/splash/android_mdpi.png',
+  'android_ldpi_portrait': 'private/splash/android_ldpi.png',
+  'android_hdpi_portrait': 'private/splash/android_hdpi.png',
+  'android_xhdpi_portrait': 'private/splash/android_xhdpi.png'
   // ... more screen sizes and platforms ...
 });
 
@@ -29,4 +29,3 @@ App.setPreference('HideKeyboardFormAccessoryBar', true);
 App.setPreference('Orientation', 'portrait');
 
 // Pass preferences for a particular PhoneGap/Cordova plugin
-

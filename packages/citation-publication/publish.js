@@ -54,6 +54,7 @@ Meteor.publish('oneCitation', function() {
   // track change to publish new item
   Tracker.autorun(() => {
     let oneCitation = citationToDisplay.get('display');
+    console.log('oneCitation', oneCitation);
     self.changed(
       Meteor.settings.public.config.collections.prefix + "-citations",
       1,
