@@ -12,7 +12,7 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
-  api.use(['ecmascript', 'underscore', 'reactive-dict', 'tracker']);
+  api.use(['ecmascript', 'underscore', 'reactive-dict', 'tracker', 'rebolon:citation-collections']);
   api.addFiles('publish.js', 'server');
 });
 

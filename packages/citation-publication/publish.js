@@ -1,3 +1,37 @@
+let date = new ReactiveDict('date'),
+  citationToDisplay = new ReactiveDict('citation'),
+  setDateTime = () => {
+    date.set('datetime', new Date());
+
+    let qry = {$or: [
+      {displayToday: date.get('datetime').toLocaleString()},
+      {displayed:
+      {$exists: false}
+      }
+    ]};
+
+    citationToDisplay.set('display', Citations.findOne(
+      qry,
+      {
+        fields: {cite: 1, author: 1, like: 1, dislike: 1},
+        sort: {displayToday: -1},
+        limit: 1
+      }
+    ));
+
+    Citations.update(citationToDisplay.get('display'),
+      {
+        $set: {
+          displayToday: date.get('datetime').toLocaleString(),
+          displayed: true
+        }
+      }
+    );
+  };
+
+setDateTime(); // init first value
+Meteor.setInterval(setDateTime, 86400000); // init interval, change each day
+
 Meteor.publish('userExtraData', function() {
   if(!this.userId) return null;
 
@@ -7,19 +41,9 @@ Meteor.publish('userExtraData', function() {
   }});
 });
 
-let date = new ReactiveDict('date'),
-  setDateTime = () => {
-    date.set('datetime', new Date());
-  };
-
-setDateTime(); // init first value
-Meteor.setInterval(setDateTime, 2000); // init interval
-
 Meteor.publish('oneCitation', function() {
-  console.info('publish oneCitation', date.get('datetime'));
-  let oneCitation,
-    oldId,
-    self = this;
+  let self = this;
+
   // added before changed
   self.added(
     Meteor.settings.public.config.collections.prefix + "-citations",
@@ -27,52 +51,15 @@ Meteor.publish('oneCitation', function() {
     {cite: date.get('datetime').toLocaleString(), author: 1, like: 1, dislike: 1}
   );
 
+  // track change to publish new item
   Tracker.autorun(() => {
-    console.log('date changed', date.get('datetime'));
-
-    let qry = {$or: [
-        {displayToday: date.get('datetime').toLocaleString()},
-        {displayed:
-        {$exists: false}
-        }
-      ]},
-      newId;
-//test of added... how to retreive citation
+    let oneCitation = citationToDisplay.get('display');
     self.changed(
       Meteor.settings.public.config.collections.prefix + "-citations",
       1,
-      {cite: date.get('datetime').toLocaleString(), author: 1, like: 1, dislike: 1}
+      {cite: oneCitation.cite, author: oneCitation.author, like: oneCitation.like, dislike: oneCitation.dislike}
     );
-
-    /*oneCitation = Citations.findOne(
-        qry,
-        {fields: {cite: 1, author: 1, like: 1, dislike: 1},
-        sort: {displayToday: -1},
-        limit: 1});
-    console.log(oneCitation._id);
-    /*
-    newId = oneCitation._id;
-    self.added(
-      Meteor.settings.public.config.collections.prefix + "-citations",
-      newId,
-      {cite: 1, author: 1, like: 1, dislike: 1}
-    );
-    self.removed(
-      Meteor.settings.public.config.collections.prefix + "-citations",
-      oldId
-    );
-
-    if (oneCitation.count() === 0) {
-      console.info(date.get('datetime').toLocaleString());
-      console.info('no citation found', qry);
-    } else {
-      console.info('citation found', newId);
-      Citations.update(newId, {$set: {displayToday: date.get('datetime').toLocaleString(), displayed: true}});
-    }
-*/
-    oldId = newId;
   });
 
   self.ready();
-  //return oneCitation;
 });

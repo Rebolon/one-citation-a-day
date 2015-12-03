@@ -1,4 +1,4 @@
-app.info({
+App.info({
   id: "com.christmas.citation.rebolon",
   name: "Citations de noël",
   description: "Une citation par jour, pour toute l'année",
