@@ -1,3 +1,7 @@
 settings.json
 package.json
 .idea
+build/android
+build/*.tar.gz
+*.keystore
+
