@@ -11,4 +11,6 @@ if [ -z "$npm_package_config_buildfolder" ]; then (
     exit 1
 ) fi
 
+echo "meteor build $npm_package_config_buildfolder $REBOLON_MOBILE_SERVER --mobile-settings $npm_package_config_settingsfile $*"; 
+
 if [ -z "$npm_package_config_settingsfile" ]; then meteor build $npm_package_config_buildfolder $REBOLON_MOBILE_SERVER $*; else meteor build $npm_package_config_buildfolder $REBOLON_MOBILE_SERVER --mobile-settings $npm_package_config_settingsfile $*; fi
