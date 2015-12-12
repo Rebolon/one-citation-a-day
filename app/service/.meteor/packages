@@ -51,8 +51,8 @@ standard-minifiers
 #webapp-hashing
 
 #to be removed
-autopublish
-insecure
+##autopublish
+##insecure
 
 # advanced
 raix:eventemitter
@@ -71,14 +71,15 @@ meteorhacks:ssr                         # server side rendering
 meteorhacks:picker                      # server side routing
 
 #monitoring
-meteorhacks:kadira
-meteorhacks:zones
-okgrow:analytics
+##meteorhacks:kadira
+##meteorhacks:zones
+##okgrow:analytics
 
 #debug
-kadira:debug
-nrswolf:observatory
+##kadira:debug
+##nrswolf:observatory
 
 #specific
 rebolon:citation-collections
 rebolon:citation-publication
+rebolon:citation-init
