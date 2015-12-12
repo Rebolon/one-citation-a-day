@@ -1,7 +1,8 @@
 settings.json
 package.json
 .idea
+passenger.*.pid*
+passenger.*.log
 build/android
 build/*.tar.gz
 *.keystore
-
