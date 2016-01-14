@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "licence": "Proprietary",
   "config": {
-    "rooturl": "",
+    "rooturl": "http://localhost",
     "mongourl": "",
     "mailurl": "",
     "port": "3002",
@@ -14,7 +14,7 @@
     "testpackagename": "",
     "deploysitename": "",
     "buildfolder": "../../build/mobile/",
-    "mobileserver": "",
+    "mobileserver": "http://localhost:3002",
     "javakeystore": "",
     "javakeystorealiasname": ""
   },
