@@ -12,6 +12,7 @@ Meteor.startup(() => {
         author: "Proverbe chinois"
       },
       {cite: "Toute l'invention consiste à faire quelque chose de rien.", author: "Jean Racine"},
+      {cite: "L'idéal de l'amitié c'est de se sentir un et de rester deux.", author: "Anne Sophie Swetchine"},
       {cite: "Un seul homme armé de courage vaut une majorité.", author: "Andrew Jackson"},
       {
         cite: "La Tour Eiffel ne devait durer que 20 ans, ... elle est devenue aussi éternelle que Paris !",
@@ -28,6 +29,8 @@ Meteor.startup(() => {
         author: "Denis Diderot"
       },
       {cite: "Si nous prenons la nature pour guide, nous ne nous égarerons jamais.", author: "Cicéron"},
+      {cite: "L'accent circonflexe est l'hirondelle de l'écriture.", author: "Jules Renard"},
+      {cite: "L'accent est l'âme du discours, il lui donne le sentiment et la vérité.", author: "Jean-Jacques Rousseau"},
       {
         cite: "La lutte donne au triomphe la saveur de la passion, et la victoire embellit la conquête.",
         author: "Georges Meredith"
@@ -43,6 +46,7 @@ Meteor.startup(() => {
         author: "Eugène Labiche"
       },
       {cite: "Il n'y a pas de moyen pour polir le hérisson.", author: "Aristophane"},
+      {cite: "L'amour qui naît subitement est le plus long à guérir.", author: "Jean de La Bruyère"},
       {
         cite: "J'aime le lit, c'est le seul endroit où, comme le chat, je puis faire le mort en respirant, tout en étant vivant.",
         author: "Arthur Cravan"
@@ -89,6 +93,8 @@ Meteor.startup(() => {
         author: "Lao Zi"
       },
       {cite: "Le meilleur secret pour ne jamais tomber c'est de rester toujours assis.", author: "Stendhal"},
+      {cite: "Ne juge aucun homme avant d'avoir marché avec ses mocassins durant deux lunes.", author: "Proverbe amérindien"},
+      {cite: "Vous ne parviendrez jamais à faire des sages si vous ne faites d'abord des polissons.", author: "Jean-Jacques Rousseau"},
       {
         cite: "Ce qui étonne, étonne une fois, mais ce qui est admirable est de plus en plus admiré.",
         author: "Joseph Joubert"
@@ -109,11 +115,13 @@ Meteor.startup(() => {
       {cite: "Nul devoir n'est plus sous-estimé que celui d'être heureux.", author: "R. L. Stevenson"},
       {cite: "Peu de gens ont le courage d'être lâches devant témoins.", author: "Théophile Gautier"},
       {cite: "L'or te donne la terre, la terre te donne de l'or.", author: "Proverbe indien"},
+      {cite: "Le regard est le médiateur des coeurs.", author: "Anonyme"},
       {
         cite: "Les petits cadeaux entretiennent l'amitié. Le premier qui a dit dela voulait se faire donner quelque chose.",
         author: "Eugène Scribe"
       },
       {cite: "Les premiers sentiments sont toujours les plus naturels.", author: "Madame de Sévigné"},
+      {cite: "Qui ne peut comme il veut, doit vouloir comme il peut.", author: "Térence"},
       {
         cite: "Etre jeune, c'est avoir un esprit qui calcule et un coeur qui ne calcule pas.",
         author: "René Bazin"
@@ -123,6 +131,7 @@ Meteor.startup(() => {
         author: "Barbey d'Aurevilly"
       },
       {cite: "L'action ne doit pas être une réaction mais une création.", author: "Censier (droit féodal)"},
+      {cite: "On ne devrait s'étonner que de pouvoir encore s'étonner.", author: "François de La Rochefoucauld"},
       {
         cite: "Le coeur n'a pas de maître, il n'est pas un esclave, et de toute contrainte il sait briser l'entrave.",
         author: "Adam Mickiewicz"
@@ -142,6 +151,7 @@ Meteor.startup(() => {
         author: "Jean de La Bruyère"
       },
       {cite: "Ecrire, c'est déjà mettre du noir sur du blanc.", author: "Stéphane Mallarmé"},
+      {cite: "Qu'importe aux coeurs unis ce qui change autour d'eux.", author: "Alphonse de Lamartine"},
       {
         cite: "N'allez pas là où le chemin peut mener. llez là où il n'y a pas de chemin et laissez une trace.",
         author: "Ralph Waldo Emerson"
@@ -192,6 +202,7 @@ Meteor.startup(() => {
         author: "Epictète"
       },
       {cite: "L'art est une démonstration dont la nature est la preuve.", author: "Georges Sand"},
+      {cite: "L'art de l'écrivain consiste surtout à nous faire oublier qu'il emploie des mots.", author: "Henri Bergson"},
       {cite: "Le désordre est simplement l'ordre que nous ne cherchons pas.", author: "Henri Bergson"},
       {
         cite: "Le défaut de l'égalité, c'est que nous ne la voulons qu'avec nos supérieurs.",
@@ -206,6 +217,7 @@ Meteor.startup(() => {
       },
       {cite: "La rose n'a d'épines que pour celui qui veut la cueillir.", author: "Proverbe chinois"},
       {cite: "Pour savoir où l'on va, il faut savoir où l'on est.", author: "Proverbe tchadien"},
+      {cite: "Sans la musique, la vie serait une erreur.", author: "F. Nietzsche"},
       {cite: "Un homme sans culture, tel un chat sans moustaches, se sent perdu.", author: "Anonyme"},
       {
         cite: "La science décrit la nature, la poésie la peint et l'embellit.",
@@ -251,6 +263,9 @@ Meteor.startup(() => {
       },
       {cite: "On se sert des couleurs, mais on peint avec le sentiment.", author: "Jean Chardin"},
       {
+        cite: "Nous pesons rarement dans la même balance des offenses que nous faisons et les offenses que l'on nous fait.",
+        author: "Esope"},
+      {
         cite: "Il faut toujours se réserver le droit de rire le lendemain de ses îdées de la veille.",
         author: "Napoléon Bonaparte"
       },
@@ -288,6 +303,7 @@ Meteor.startup(() => {
         author: "Le schpountz"
       },
       {cite: "Trouver n'est rien, c'est le plan qui est difficile.", author: "Fiodor Dostoïevski"},
+      {cite: "La modestie est le meilleur appât pour aller à la pêche aux compliments.", author: "Gilbert Keith Chersterton"},
       {
         cite: "Une civilisation me parait se définir à la fois pas des questions qu'elle pose et par celles qu'elle ne pose pas.",
         author: "André Malraux"
