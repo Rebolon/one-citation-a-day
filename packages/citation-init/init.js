@@ -3,6 +3,26 @@ Meteor.startup(() => {
   if (Citations.find().count() === 0) {
     var cites = [
       {
+        cite: "Bonne cuisine et bon vin, c'est le paradis sur terre.",
+        author: "Henri IV"
+      },
+      {
+        cite: "La musique est la langue des émotions.",
+        author: "Emmanuel Kant"
+      },
+      {
+        cite: "Le plaisir se ramasse la joie se cueille et le bonheur se cultive.",
+        author: "Bouddha"
+      },
+      {
+        cite: "Quand ce que vous pensez, ce que vous dites et ce que vous faites sont en harmonie, le bonheur vous appartient.",
+        author: "Gandhi"
+      },
+      {
+        cite: "Qui veut faire le bonheur des autres a déjà fait le sien.",
+        author: "Proverbe chinois"
+      },
+      {
         cite: "La sagesse, c'est d'avoir des rêves suffisamment grands pour ne pas les perdre de vue lorsqu'on les poursuit.",
         author: "Oscar Wilde"
       },
